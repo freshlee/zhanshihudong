@@ -1,20 +1,64 @@
-.text{
-  padding: 20px 0;
-  font-size: 18px;
-  color:#f63;
+.ss {
+  display: table;
+  width: 100%;
 }
-.btn{
-  width: 120px;
-  height: 36px;
-  line-height: 36px;
-  background-color: #677D7C;
-  color:#fff;
-  text-align: center;
-  border:none;
-  box-shadow: 0 1px 3px #999;
-  font-size: 16px;
-  cursor: pointer;
+.global {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: table-cell;
+  vertical-align: middle;
 }
-.img{
-  margin-top: 20px;
+.container-wrap {
+  // display: table-cell;
+  position: relative;
+  .expend {
+    width: 92%;
+    min-width: 858px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    @media screen and ( min-width: 887px ) {
+      padding-bottom: 55%; 
+    }
+    @media screen and ( max-width: 887px ) {
+      padding-bottom: 488px;
+    }
+    @media screen and ( max-width: 1400px ) {
+      padding-bottom: 55%; 
+    }
+    @media screen and ( min-width: 1400px ) {
+      padding-bottom: 770px;
+    }
+    // padding-bottom: 488px;
+    // padding-bottom: 488px;
+  }
+  .container {
+    position: absolute;
+    height: 100%;
+    min-height: 488px;
+    top: 0;
+    width: 92%;
+    min-width: 858px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    .content {
+      position: relative;
+      height: 100%;
+      &>div {
+        display: inline-block;
+        height: 100%;
+      }
+      .left-wrap {
+        width: 18%;
+        background: yellow;
+      }
+      .right-wrap {
+        width: 80%;
+        background: burlywood;
+      }
+    }
+  }
 }
