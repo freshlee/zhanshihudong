@@ -1,6 +1,6 @@
 const merge = require('webpack-merge');
 const path = require('path');
-
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const commonConfig = require('./webpack.common.config.js');
 
 const devConfig = {
@@ -11,8 +11,8 @@ const devConfig = {
     },
     module: {
         loaders: [{
-            test: /\.css$/,
-            loaders: ["style-loader", "css-loader", "postcss-loader"]
+            test: /\.(less|css)$/,
+            loaders: ["style-loader", "css-loader", "less-loader", "postcss-loader"]
         }]
     },
     devServer: {

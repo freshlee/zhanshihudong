@@ -1,0 +1,157 @@
+.global-wrap {
+    display: table;
+    width: 100%;
+    background: url('../../../dist/img/bg-live.jpg');
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+  }
+  .global {
+    position: relative;
+    // height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .container-wrap {
+    // display: table-cell;
+    position: relative;
+    .expend {
+      // min-width: 858px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      @media screen and ( min-width: 887px ) {
+        padding-bottom: 47.3%; 
+      }
+      @media screen and ( max-width: 887px ) {
+        padding-bottom: 420px !important;
+      }
+      @media screen and ( max-width: 1440px ) {
+        padding-bottom: 47.3%; 
+      }
+      @media screen and ( min-width: 1440px ) {
+        padding-bottom: 802px;
+      }
+      // padding-bottom: 4880298d4px;
+      // padding-bottom: 488px;
+    }
+    .container-lee {
+      @media screen and ( min-width: 1440px ) {
+        width: 1429px;
+      }
+      @media screen and ( max-width: 887px ) {
+        width: 810px !important;
+      }
+      position: absolute;
+      height: 100%;
+      // min-height: 488px;
+      top: 0;
+      width: 92%;
+      // min-width: 858px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      .content {
+        font-size: 12px;
+        position: relative;
+        height: 100%;
+        &>div {
+          vertical-align: top;
+          display: inline-block;
+          height: 100%;
+        }
+        .left-wrap {
+          width: 26%;
+          height: 100%;
+          position: relative;
+          .chat-wrap {
+            box-sizing: border-box;
+            padding: 75% 0 0;
+            background: rgba(0,0,0,.15);
+            height: 100%;
+            .chat-title {
+              height: 34px;
+              line-height: 34px;
+              background: rgba(0,0,0,.4);
+              padding-left: 10px;
+              color: #fff;
+              position: relative;
+            }
+            .chat-input-area {
+              height: 83px;
+              border-top: 1px solid rgba(255,255,255,.05);
+              position: relative;
+              bottom: 0;
+              width: 100%;
+              padding: 0 10px;
+              box-sizing: border-box;
+              h4.input-area-title {
+                height: 30px;
+                line-height: 30px;
+                color: #cccccc;
+              }
+              .area-line {
+                position: relative;
+                width: 100% ;
+                textarea.input-area-text {
+                  font: 12px "Microsoft YaHei";
+                  width: 100%;
+                  box-sizing: border-box;
+                  min-height: 40px;
+                  height: 40px;
+                  _height: 34px;
+                  resize: none;
+                  overflow: auto;
+                  outline: none;
+                  padding: 2px;
+                  padding-right: 20%;
+                  background: rgba(0,0,0,.35);
+                  border: 1px solid rgba(255,255,255,.2);
+                  padding-right: 20%;
+                  color:#fff;
+                }
+                button.send {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  width: 45px;
+                  height: 40px;
+                  line-height: 40px;
+                  border: 0;
+                  outline: none;
+                  border: 0px;
+                  text-align: center;
+                  background: #0298d4;
+                  color: #fff
+                }
+              }
+            }
+          }
+        }
+  
+        .right-wrap {
+          box-sizing: border-box;
+          position: relative;
+          width: 74%;
+          background: rgba(255, 255, 255, 0);
+          padding-left: 6px;
+          .right-wrap-content{
+            // background: green;
+            height: 100%;
+            padding-bottom: 50px;
+            box-sizing: border-box;
+          }
+        }
+        .mainVideo {
+          background:rgba(0,0,0,.50);
+          height: 37.5%;
+          left: 0;
+          top: 0;
+          width: 26%;
+          position: absolute;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,99 @@
+.ant-popover-arrow {
+    display: none !important;
+}
+.hasIcon {
+    height: 24px;
+    width: 24px;
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    background: url('../../img/bg_smaall.png');
+    cursor: pointer !important;
+    &.voice-tool {
+        background-position: -646px -21px;
+    }
+    &.video-trigger{
+        background-position: -752px -23px;
+    }
+    &.video-switch{
+        background-position: -727px -49px;
+    }
+    &.net-chosen{
+        background-position: -528px -48px;
+    }
+    &.raise{
+        background-position: -100px -1px;
+        height: 36px;
+        width: 36px;
+    }
+    &.question{
+        background-position: -134px -1px;
+        height: 36px;
+        width: 36px;
+    }
+    &.info{
+        background-position: -168px -1px;
+        height: 36px;
+        width: 36px;
+    }
+}
+.tool-bar {
+    height: 50px;
+    width: 100%;
+    background: rgba(0,0,0,.35);
+    position: absolute;
+    // padding: 0 10px;
+    bottom: 0;
+    >div {
+        position: relative;
+        top: 50%;
+        margin-top: -12px;
+        display: inline-block;
+        height: 24px;
+    }
+    .voice-tool-wrap {
+        width: 133px;
+        &>div {
+            display: inline-block;
+            // vertical-align: middle;
+        }
+        .slider-bar {
+            position: relative;
+            height: 24px;
+            width: 90px;
+            box-sizing: border-box;
+            margin-left: 9px;
+            > div {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                height: 10px;
+            }
+        }
+    }
+    .rightSide {
+        height: 34px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+    }
+}
+.channel-list {
+    .ant-popover-inner {
+        border-radius: 0;
+    }
+    .ant-popover-inner-content {
+        opacity: 0.9 !important;
+        background: rgb(32, 41, 51);
+        p.channel {
+            color: #fff;
+            margin: 0;
+            cursor: pointer !important;
+        }
+    }
+}
