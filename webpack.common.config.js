@@ -6,8 +6,8 @@ const es3ifyPlugin = require('es3ify-webpack-plugin');
 commonConfig = {
     entry: {
         app: [
-            "es5-shim", "es5-shim/es5-sham",
-            "babel-polyfill",
+            // "es5-shim", "es5-shim/es5-sham",
+            // "babel-polyfill",
             path.join(__dirname, 'src/index.js')
         ]
     },
@@ -18,12 +18,6 @@ commonConfig = {
         publicPath: "/"
     },
     module: {
-        postLoaders: [
-            {
-                test: /\.js$/,
-                loaders: ['export-from-ie8/loader']
-            }
-        ],
         loaders: [{
             test: /\.js$/,
             loaders: ['babel-loader?cacheDirectory=true'],

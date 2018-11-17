@@ -36,6 +36,12 @@
         height: 36px;
         width: 36px;
     }
+    &.tick {
+        margin: 0;
+        background-position: -2px 0px;
+        width: 16px;
+        height: 14px;
+    }
 }
 .tool-bar {
     height: 50px;
@@ -90,10 +96,29 @@
     .ant-popover-inner-content {
         opacity: 0.9 !important;
         background: rgb(32, 41, 51);
+        padding: 5px 16px;
         p.channel {
-            color: #fff;
             margin: 0;
-            cursor: pointer !important;
+            color: #fff;
+            padding: 5px 0;
+            cursor: pointer;
+            overflow: hidden;
+            line-height: 15px;
+            width: 220px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 12px;
+            .interval {
+                display: inline-block;
+                width: 16px;
+            }
+            .name {
+                margin-left: 5px;
+            }
+            &>span {
+                display: inline-block;
+                vertical-align: middle;
+            }
         }
     }
 }

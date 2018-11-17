@@ -10,6 +10,12 @@ const devConfig = {
         filename: '[name].[hash].js'
     },
     module: {
+        postLoaders: [
+            {
+                test: /\.js$/,
+                loaders: ['export-from-ie8/loader']
+            }
+        ],
         loaders: [{
             test: /\.(less|css)$/,
             loaders: ["style-loader", "css-loader", "less-loader", "postcss-loader"]

@@ -11,13 +11,15 @@ export default class Toolbar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            count: 0
+            count: 0,
+            channelIndex: null
         }
     }
 
-    _handleClick() {
+    changeChanel(channelIndex) {
+        console.log(channelIndex,'channelIndex')
         this.setState({
-            count: ++this.state.count
+            channelIndex
         });
     }
     componentDidMount  () {
@@ -25,12 +27,16 @@ export default class Toolbar extends Component {
         $('#global').height($(window).height())
     }
     render() {
-        const content = (
+        const {switchOp} = this.props
+        console.log(this, 'this')
+        const list = ['国际网络（International Network）', '华南二区', '华南三区']
+        const content = 
             <div>
-              <p className="channel">华南一区</p>
-              <p className="channel">华南二区</p>
+                {list.map((item, index) => {
+                    return  (<p className="channel" key={index} onClick={this.changeChanel.bind(this, index)}>
+                    <span className={'tick ' + (index === this.state.channelIndex ? 'hasIcon':'interval')}></span><span className="name">{item}</span></p>)
+                })}
             </div>
-        )
         const overlayStyle = {
             background: 'rgba(32, 41, 51, 0.9)',
             padding: '0'
@@ -44,7 +50,7 @@ export default class Toolbar extends Component {
                     </div>
                 </div>
                 <div className="video-trigger hasIcon"></div>
-                <div className="video-switch hasIcon"></div>
+                <div className="video-switch hasIcon" onClick={switchOp()}></div>
                 <Popover content={content} trigger="click" overlayClassName="channel-list" overlayStyle={overlayStyle}>
                     <div className="net-chosen hasIcon"/>
                 </Popover>

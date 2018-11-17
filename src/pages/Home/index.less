@@ -37,12 +37,6 @@
       // padding-bottom: 488px;
     }
     .container-lee {
-      @media screen and ( min-width: 1440px ) {
-        width: 1429px;
-      }
-      @media screen and ( max-width: 887px ) {
-        width: 810px !important;
-      }
       position: absolute;
       height: 100%;
       // min-height: 488px;
@@ -73,10 +67,16 @@
             .chat-title {
               height: 34px;
               line-height: 34px;
-              background: rgba(0,0,0,.4);
+              background: #000;
+              opacity: 0.4;
               padding-left: 10px;
               color: #fff;
               position: relative;
+            }
+            .msg-zone {
+              padding: 0px 10px 0px 20px;
+              overflow-y: auto;
+              overflow-x: hidden;
             }
             .chat-input-area {
               height: 83px;
@@ -134,7 +134,6 @@
           box-sizing: border-box;
           position: relative;
           width: 74%;
-          background: rgba(255, 255, 255, 0);
           padding-left: 6px;
           .right-wrap-content{
             // background: green;
@@ -144,12 +143,45 @@
           }
         }
         .mainVideo {
-          background:rgba(0,0,0,.50);
+          background:#000;
+          opacity: 0.5;
           height: 37.5%;
           left: 0;
           top: 0;
           width: 26%;
           position: absolute;
+        }
+        .subVideo {
+          background:#000;
+          opacity: 0.5;
+          margin-left: 6px;
+          left: 26%;
+          top: 0;
+          box-sizing: border-box;
+          width: 74%;
+          position: absolute;
+        }
+      }
+      @media screen and ( min-width: 1440px ) {
+        width: 1429px !important;
+        .content {
+          .mainVideo {
+            height: 275px;
+          }
+          .subVideo {
+            height: 746px;
+          }
+        }
+      }
+      @media screen and ( max-width: 887px ) {
+        width: 810px !important;
+        .content {
+          .mainVideo {
+            height: 155px;
+          }
+          .subVideo {
+            height: 365px;
+          }
         }
       }
     }
